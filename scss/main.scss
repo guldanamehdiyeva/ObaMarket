@@ -1,0 +1,293 @@
+/*All colors========================================================*/
+:root {
+    // bg
+    --advertising-bg: #4782F5;
+    --cancel-bg: #ffffff1f;
+    --logo-bg: #007332;
+    --search-input-bg:#02823A;
+    --btn-bg:#FFDC32;
+    --order-bg: #EEF9FF;
+    --previous-btn: #85899826;
+    --next-btn: #00863a48;
+    --discount2-bg: #8E10F0;
+    --media-bg:#FFBD3E;
+    --human-resources: #FC5E5E;
+    --rent-bg: #5EB0FC;
+    --close-icon-bg: #272C38;
+    --multi-step-form: #FBFBFD;
+    --multi-step-bar: #EFF0F2;
+    --step-input:#F9F9F9;
+    --icon-bg: #FCFCFC;
+  
+    
+    
+    
+    // color
+    --link-text: #444750;
+    --main-text: #272C38;
+    --order-text: #1F93FF;
+    --oba-text: #FFDC32;
+    --weight-text: #858998;
+    --discount-text: #ED2939;
+    --add-input:#007332;
+   
+    
+  }
+  
+  // https://chir.ag/projects/name-that-color - color names
+  
+  $all-colors: (
+    bg-colors: (
+        cornflower-blue: var( --advertising-bg),
+        open-white: var(--cancel-bg),
+        fun-green: var(--logo-bg),
+        fun-green2: var(--search-input-bg),
+        bright-sun: var(--btn-bg),
+        solitude: var(--order-bg),
+        manatee: var(--previous-btn),
+        fun-green3: var(--next-btn),
+        violet: var(--discount2-bg),
+        orange: var(--media-bg),
+        carnation: var(--human-resources),
+        malibu: var(--rent-bg),
+        ebony-clay: var(--close-icon-bg),
+        whisper: var(--multi-step-form),
+        athens: var(--multi-step-bar),
+        alabaster: var(--step-input),
+        alabas: var(--icon-bg)
+    ),
+    
+    text-colors: (
+        secondary-black: var(--link-text),
+        ebony-clay: var(--main-text),
+        dodger-blue: var(--order-text),
+        bright-sun: var(--oba-text),
+        manatee: var(--weight-text),
+        alizarin: var(--discount-text),
+        fun-green: var(--add-input)
+
+     
+    )
+  );
+  
+  /* Background colors=============================================================== */
+  @include make-colors(map-get($all-colors, bg-colors), bg);
+  .bg-radial{background: radial-gradient(100% 642.73% at 0% 50%, #F4F6FA 0%, #D7E0EE 100%);}
+  .bg-green-radial{background: radial-gradient(68.6% 237.11% at 26.55% 50%, #6EBB6B 0%, #279422 100%);}
+  .bg-purple-radial{background: radial-gradient(73.78% 438.33% at 26.22% 50%, #9386E6 0%, #7457E9 100%);}
+  .bg-emerald-radial{background: radial-gradient(73.78% 438.33% at 26.22% 50%, #5AC972 0%, #21B542 100%);}
+  .bg-red-radial{background: radial-gradient(73.78% 438.33% at 26.22% 50%, #FA6969 0%, #E25148 100%)}
+  .bg-white-01{background-color: rgb(255 255 255 / 13%);}
+  .bg-green{background-color: rgba(0, 128, 0, 0.397)}
+
+
+
+  /* Text colors=============================================================== */
+  @include make-colors(map-get($all-colors, text-colors));
+
+
+
+  /*Squares===============================================================*/
+  $squares: (
+    xs: ( 13: 13, 16: 16, 18: 18, 20:20,  24: 24, 32: 32, 36:36, 40: 40, 48: 48, 52: 52, 60: 60,)
+  );
+
+  @include make-shape($squares, square);
+
+
+  /*Rectangles====================================*/
+  $rectangles: (
+  xs: (108: 55, 93: 47, 42: 59, 120: 110 , 270: 188, 64: 28)
+  
+  );
+
+  @include make-shape($rectangles);
+
+
+
+/*Heights===============================================================*/
+$heights:32, 48, 51, 86, 88, 120, 136, 154, 176, 200, 264, 363,  510, 616, 626, 664,900;
+@each $height in $heights {
+  .h-#{$height} { height: #{$height}px }
+}
+.h-93-vh{height: 93vh;}
+
+/*Widths===============================================================*/
+$widths:6, 60, 90, 91, 100, 112, 135, 143, 151, 154, 199, 206, 230, 270, 289, 298, 306, 341, 360, 378, 469, 608,1440;
+@each $width in $widths {
+  .w-#{$width} { width: #{$width}px };
+ 
+}
+.w-220{width: 220.44px;}
+.w-47p{width: 47%;}
+.w-49p{width: 49%;}
+
+
+/* Borders ===============================================================*/
+$border-colors: #E8E8E8,#E5E8ED,#858998, #f9f9f96c, #D6D8DC, #DDDDDD, #D6DCE3, #007332, #D8DAE1 ;
+@each $brd-color in $border-colors {
+  $brd-color: str-replace(to-string($brd-color), '#', '');
+  .border-#{$brd-color} { border-color: #{'#'}#{$brd-color} }
+}
+.border-007332{border-color: #007332!important;}
+
+/* Border radius=============================================================== */
+$radius:3, 6, 12, 16, 30, 40, 100;
+@each $rad in $radius {
+  .radius-#{$rad} { border-radius: #{$rad}px }  
+}
+
+.radius-12-12-0-0{border-radius: 12px 12px 0 0;}
+
+
+
+
+/* Icons=============================================================== */
+$icons: delete, flag, pen, trash, arrow-down, facebook, youtube, instagram, tik-tok, twitter, linkedin, logo, search, shop, discount, phone, bread, user, menu, filter, arrow-down, play, team, rent, left-arrow, right-arrow, jimanovstudio, arrow-up, trash-bin,exit, camera, plus;
+@each $icon in $icons {
+  .icon-#{$icon} { background-image: url("../img/icons/"+ $icon +".svg") }
+}
+
+.icon-plus{filter: invert(18%) sepia(95%) saturate(2747%) hue-rotate(145deg) brightness(91%) contrast(101%);}
+
+
+/*Images===============================================================*/
+$images:  advertising-bg, milk-bg, malaco, main-banner, mobile-milk-bg, mobile-malaco, discount-food, time-bg, mobile-food, mobile-time-bg, iphone-bg, mobile-iphone, vector, yellow-vector;
+@each $image in $images {
+  .img-#{$image} { background-image: url("../img/"+ $image +".svg") }
+}
+
+
+
+
+/*Input styles=============================================*/
+
+
+.input::placeholder{
+  color: #272C38!important;
+  opacity: 0.4!important;
+  font-family: 'TT Hoves' , sans-serif;
+ 
+ 
+}
+
+input::-webkit-input-placeholder{
+  @extend .color-white;
+  opacity: 0.6;
+  font-size: 15px;
+  line-height: 24px;
+  transition: all .4s ease;
+  @extend .fw-400;
+}
+
+:focus::-webkit-input-placeholder{opacity: 1;}
+
+.checkmark{
+  transition: all .6s ease;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 9px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-radius: 1px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-50deg);
+  opacity: 0;
+  transition: all .6s ease;
+}
+ 
+#check:checked ~ .checkmark {
+   background-color: #007332;
+}
+
+#check:checked ~ .checkmark::after {
+  opacity: 1;
+}
+
+
+
+#check1:checked ~ .radio-btn,
+#check2:checked ~ .radio-btn1,
+#check3:checked ~ .radio-btn3,
+#check4:checked ~ .radio-btn4,
+#check5:checked ~ .radio-btn5,
+#check6:checked ~ .radio-btn6,
+#check7:checked ~ .radio-btn7,
+#check8:checked ~ .radio-btn8{
+  border-color:#007332;
+}
+
+.radio-btn::before, 
+.radio-btn1::before,
+.radio-btn3::before,
+.radio-btn4::before,
+.radio-btn5::before,
+.radio-btn6::before,
+.radio-btn7::before,
+.radio-btn8::before{
+  content: '';
+  @extend .square-16;
+  @extend .radius-50p;
+  @extend .border-2;
+  @extend .border-858998;
+  @extend .pointer;
+  margin-left: 16px;
+
+}
+ 
+#check1:checked ~ .radio-btn::before,
+#check2:checked ~ .radio-btn1::before,
+#check3:checked ~ .radio-btn3::before ,
+#check4:checked ~ .radio-btn4::before ,
+#check5:checked ~ .radio-btn5::before ,
+#check6:checked ~ .radio-btn6::before ,
+#check7:checked ~ .radio-btn7::before ,
+#check8:checked ~ .radio-btn8::before  {
+  border: 4px solid #00863b;
+}
+
+
+
+
+/*Others===========================================================*/
+.filter-dusty-gray{filter: invert(74%) sepia(0%) saturate(12%) hue-rotate(227deg) brightness(84%) contrast(81%);}
+.filter-gallery{filter: invert(99%) sepia(4%) saturate(74%) hue-rotate(229deg) brightness(113%) contrast(87%);}
+.filter-right-arrow{filter: invert(58%) sepia(2%) saturate(2240%) hue-rotate(190deg) brightness(93%) contrast(80%);}
+.filter-left-arrow{filter: invert(27%) sepia(82%) saturate(1471%) hue-rotate(125deg) brightness(100%) contrast(102%);}
+
+.left-pos{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-pos{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+.left-5p{left: 5%;}
+.left-13p{left: -13%;}
+.right-5{right: 5px;}
+.right-5p{right: 5%;}
+.right-12{right: 12px;}
+.right-10p{right: -10%;}
+.right-20p{right: 20%;}
+.top-6p{top: 6%;}
+.top-10{top: 10px;}
+.top-53{top: 53px;}
+.bot-16p{bottom: 16%;}
+.bottom-300{bottom:300px;}
+
+
+.box:hover{box-shadow: 0px -8px 32px rgba(20, 25, 34, 0.04), 0px 26px 40px rgba(20, 25, 34, 0.08);}
+.hover-trash:hover .overlay{
+  opacity: 1;
+
+}

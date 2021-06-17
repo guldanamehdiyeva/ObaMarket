@@ -1,0 +1,94 @@
+  .roboto{font-family: 'Roboto', sans-serif;}
+  .tt-hoves{font-family: 'TT Hoves', sans-serif;}
+
+
+  @for $i from 4 through 7 {
+    .fw-#{$i * 100} { font-weight: #{$i * 100} }
+  }
+  
+  /* Line heights========================================================= */
+  $line-heights:16, 18, 20,  24, 28, 32, 36;
+  @each $lh in $line-heights {
+    .lh-#{$lh} { line-height: #{$lh}px }
+  }
+  
+  
+  
+  
+  /* Font sizes =========================================================*/
+  $font-sizes:9,10,11,12, 13, 14, 15, 16, 18, 20, 24, 30 ;
+  @each $size in $font-sizes {
+    .fs-#{$size} { font-size: #{$size}px }
+  }
+  
+  
+  
+  
+
+  @media (min-width: map-get($break-points-config, md)) {
+      /*Font sizes=========================================================*/
+      $font-sizes:16, 18, 20, 40;
+      @each $size in $font-sizes {
+        .fs-md-#{$size} { font-size: #{$size}px }
+      }
+      /*Line heights=========================================================*/
+      $line-heights:  28, 52;
+      @each $lh in $line-heights {
+        .lh-md-#{$lh} { line-height: #{$lh}px }
+      }
+  }
+  
+  @media (min-width: map-get($break-points-config, lg)) {
+  /*Font sizes=========================================================*/
+    $font-sizes:13, 14, 15, 16, 18, 22, 24, 28, 32, 36, 40, 47;
+    @each $size in $font-sizes {
+      .fs-lg-#{$size} { font-size: #{$size}px }
+    }
+  /*Line heights=========================================================*/
+    $line-heights:18, 20, 24, 28, 32, 40, 48, 52, 55;
+    @each $lh in $line-heights {
+      .lh-lg-#{$lh} { line-height: #{$lh}px }
+    }
+  
+    
+  }
+  
+  @media (min-width: 1200px) {
+    /*Font sizes=========================================================*/
+      $font-sizes:  18, 48;
+      @each $size in $font-sizes {
+        .fs-xl-#{$size} { font-size: #{$size}px }
+      }
+  
+      
+    /*Line heights=========================================================*/
+     
+      .lh-xl-56 { line-height: 56px }
+      
+    
+    }
+    
+
+
+
+@font-face {
+    font-family: 'TT Hoves';
+    src: local('TT Hoves Regular'), local('TT-Hoves-Regular'),
+        url('../fonts/') format('woff2'),
+        url('../fonts/TTHoves-Regular.woff') format('woff'),
+        url('../fonts/TTHoves-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'TT Hoves';
+    src: local('TT Hoves DemiBold'), local('TT-Hoves-DemiBold'),
+        url('../fonts/') format('woff2'),
+        url('../fonts/TTHoves-DemiBold.woff') format('woff'),
+        url('../fonts/TTHoves-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
