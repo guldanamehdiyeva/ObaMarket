@@ -30,6 +30,7 @@
     --weight-text: #858998;
     --discount-text: #ED2939;
     --add-input:#007332;
+    --login-link: #f9f9f9;
    
     
   }
@@ -64,7 +65,8 @@
         bright-sun: var(--oba-text),
         manatee: var(--weight-text),
         alizarin: var(--discount-text),
-        fun-green: var(--add-input)
+        fun-green: var(--add-input),
+        alabaster: var(--login-link)
 
      
     )

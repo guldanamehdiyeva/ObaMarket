@@ -5,9 +5,6 @@
 
 
 
-
-
-
 @media (min-width: map-get($break-points-config, md)) {
   /*Slider*/
   .slider1.swiper-container{height: 571px!important;}
@@ -180,7 +177,11 @@
 
   .d-lg-none {display: none!important;}
   .d-lg-block {display: block!important;}
-  
+  .d-lg-inline-block {display: inline-block!important;}
+  .d-lg-inline-flex{
+    display: inline-flex!important;
+    &-y-center{display: inline-flex!important; align-items: center;}
+  }
  
   
 

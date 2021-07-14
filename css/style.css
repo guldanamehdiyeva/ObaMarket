@@ -8,6 +8,10 @@ body {
   font-weight: 400;
 }
 
+figure {
+  margin: 0;
+}
+
 /* Text colors=================================================== */
 .color-white, input::-webkit-input-placeholder {
   color: #fff !important;
@@ -546,6 +550,7 @@ body {
   --weight-text: #858998;
   --discount-text: #ED2939;
   --add-input:#007332;
+  --login-link: #f9f9f9;
 }
 
 /* Background colors=============================================================== */
@@ -672,6 +677,10 @@ body {
 
 .color-fun-green {
   color: var(--add-input);
+}
+
+.color-alabaster {
+  color: var(--login-link);
 }
 
 /*Squares===============================================================*/
@@ -1994,6 +2003,18 @@ input::-webkit-input-placeholder {
 
   .d-lg-block {
     display: block !important;
+  }
+
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-lg-inline-flex {
+    display: inline-flex !important;
+  }
+  .d-lg-inline-flex-y-center {
+    display: inline-flex !important;
+    align-items: center;
   }
 }
 /*---------------------------------------------------------------*/
