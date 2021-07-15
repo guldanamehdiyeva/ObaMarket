@@ -1389,6 +1389,10 @@ input::-webkit-input-placeholder {
   opacity: 1;
 }
 
+.no-active {
+  display: none;
+}
+
 .roboto {
   font-family: "Roboto", sans-serif;
 }

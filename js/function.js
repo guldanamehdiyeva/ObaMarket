@@ -2,15 +2,31 @@
 /*Menu*/
 const menuToggleMobile = () => $('.js-menu').on('click', e => __menuToggleMobileActions());
 $('#js-menu-mobile').find('a').on('click', e => __menuToggleMobileActions());
+$('#js-career-menu').find('a').on('click', e => __menuToggleMobileActions());
 
 const __menuToggleMobileActions = () => {
     /*if($('.bg-land-header').length) {
         $('body').toggleClass('overflow-h h-100-vh');
     }*/
 
-    $('.js-menu').toggleClass('is-active');
-    $('#js-menu-mobile').toggleClass('left-0');
+    $('.js-menu').click( e => {
+        $('#js-menu-mobile').toggleClass('left-0');
+        $('#js-career-menu').addClass('left-0');
+    });
+
+    
     $('#js-overlay-body').toggleClass('d-none');
+
+    if ($('#js-career-menu').hasClass('left-0')) {
+        $('.js-menu').css('display','none')
+        $('.js-menu-delete').removeClass('no-active')
+        
+    }
+
+    $('js-menu-delete').click( e => {
+        $('.js-menu').addClass('is-active');
+        $('#js-career-menu').removeClass('left-0')
+    })
 };
 
 
@@ -157,7 +173,7 @@ const addRows = (options = {}) => {
 }
 
 
-console.log('hiiii')
+console.log('mmmm')
 
 /*Timer countdown
 
