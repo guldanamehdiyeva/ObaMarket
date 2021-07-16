@@ -272,8 +272,6 @@ input::-webkit-input-placeholder{
   transform: translateY(-50%);
 }
 
-
-
 .left-5p{left: 5%;}
 .left-13p{left: -13%;}
 .right-5{right: 5px;}
@@ -284,6 +282,8 @@ input::-webkit-input-placeholder{
 .top-6p{top: 6%;}
 .top-10{top: 10px;}
 .top-53{top: 53px;}
+.bot-10p{bottom: 10%;}
+.bot-15p{bottom: 15%;}
 .bot-16p{bottom: 16%;}
 .bottom-300{bottom:300px;}
 
@@ -295,3 +295,17 @@ input::-webkit-input-placeholder{
 }
 
 .no-active{display: none;}
+
+
+/*Hamburger Menu*/
+.link-white {
+  a, a * { color: $color-white !important; }
+
+  .hamburger .hamburger-inner { background-color: $color-white; }
+
+  #js-menu-mobile {
+    a, a * { color: $color-black !important; }
+
+    .hamburger .hamburger-inner { background-color: $color-black }
+  }
+}
