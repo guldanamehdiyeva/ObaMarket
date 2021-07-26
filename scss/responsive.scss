@@ -87,6 +87,7 @@
     top: 24%;
     right: auto;
   }
+
   /*Timer*/
   .countMinutes,.countHours{margin-right: 14px}
 
@@ -108,6 +109,8 @@
   }
 
   .h-lg-100p{height: 100%;}
+
+  .full-height-cabinet-lg{height: calc(100vh - 154px + 64px);}
   
   /*Border-radius=====================================================*/
   .radius-lg-32{border-radius: 32px;}

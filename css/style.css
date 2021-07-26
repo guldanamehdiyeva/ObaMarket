@@ -1510,6 +1510,10 @@ input::-webkit-input-placeholder {
   bottom: 300px;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .box:hover {
   box-shadow: 0px -8px 32px rgba(20, 25, 34, 0.04), 0px 26px 40px rgba(20, 25, 34, 0.08);
 }
@@ -2000,6 +2004,10 @@ input::-webkit-input-placeholder {
 
   .h-lg-100p {
     height: 100%;
+  }
+
+  .full-height-cabinet-lg {
+    height: calc(100vh - 154px + 64px);
   }
 
   /*Border-radius=====================================================*/

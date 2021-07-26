@@ -19,7 +19,6 @@ $isIndex = strpos($_SERVER['SCRIPT_NAME'], 'index');
     <link rel="stylesheet" href="../css/vendor/swiper.min.css">
 
     
-
     <!--Timer Countdown plugin-->
     <link rel="stylesheet" href="../css/vendor/jquery.countdown.css">
 
@@ -33,7 +32,6 @@ $isIndex = strpos($_SERVER['SCRIPT_NAME'], 'index');
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-   
 
     <!--Bootstrap Grid-->
     <link rel="stylesheet" href="../css/vendor/bootstrap-grid.css">
@@ -44,4 +42,4 @@ $isIndex = strpos($_SERVER['SCRIPT_NAME'], 'index');
     
     
 </head>
-<body>
+<body <?= (in_array($checkFileName, ['login.php','register.php'])) ? 'overflow-hidden' : '' ?>>
