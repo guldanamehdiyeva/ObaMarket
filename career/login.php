@@ -9,7 +9,7 @@
                 </figure>
             </div>
             <div class="col-lg-6">
-
+                <span class="icon icon-user square-48"></span>
             </div>
         </div>
     </section>
