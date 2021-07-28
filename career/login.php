@@ -3,12 +3,12 @@
 <main>
     <section class="container-fluid">
         <div class="row">
-            <div class="col-lg-9 px-0 full-height-cabinet-lg">
+            <div class="col-lg-7 px-0 full-height-cabinet-lg">
                 <figure class="h-100p">
-                    <img src="../img/hr-cabinet.svg" class="object-fit-cover h-100p" alt="daxil ol">
+                    <img src="../img/hr-cabinet.svg" class="w-100p object-fit-cover h-100p" alt="daxil ol">
                 </figure>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <span class="icon icon-user square-48"></span>
             </div>
         </div>
